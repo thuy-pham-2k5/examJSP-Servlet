@@ -1,11 +1,10 @@
-<%@ page import="com.example.examjspservlet.Request" %>
+<%@ page import="com.example.examjspservlet.LeaveRequest" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="com.example.examjspservlet.Request" %><%--
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: ASUS
-  Date: 12/4/2024
-  Time: 4:29 PM
+  Date: 12/5/2024
+  Time: 11:10 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -18,9 +17,9 @@
 <body>
 <h1>Manage Leave Requests</h1>
 <%
-    List<Request> requestList = new ArrayList<>();
-    requestList.add(new Request("Employee name A", "2024/10/09", "2024/12/04", "Pending approval"));
-    requestList.add(new Request("Employee name B", "2024/09/09", "2024/12/02", "Approved"));
+    List<LeaveRequest> requestList = new ArrayList<>();
+    requestList.add(new LeaveRequest("Employee name A", "2024/10/09", "2024/12/04", "Pending approval"));
+    requestList.add(new LeaveRequest("Employee name B", "2024/09/09", "2024/12/02", "Approved"));
     request.setAttribute("items", requestList);
 %>
 <c:forEach var="item" items="${items}">
@@ -32,3 +31,4 @@
 </c:forEach>
 </body>
 </html>
+

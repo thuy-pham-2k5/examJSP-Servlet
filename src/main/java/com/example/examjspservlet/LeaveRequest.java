@@ -1,9 +1,9 @@
 package com.example.examjspservlet;
 
-public class Request {
+public class LeaveRequest {
     private String name, startDate, endDate, status;
 
-    public Request(String name, String startDate, String endDate, String status) {
+    public LeaveRequest(String name, String startDate, String endDate, String status) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
