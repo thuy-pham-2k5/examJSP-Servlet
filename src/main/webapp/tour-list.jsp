@@ -17,18 +17,17 @@
 <body>
 <h1>Manage Bank Accounts</h1>
 <%
-    List<Tour> tourList = new ArrayList<>();
-    tourList.add(new Tour("Abc", "Khu A", "2024/12/4", 12000, "Available"));
-    tourList.add(new Tour("Abc", "Khu B", "2024/12/4", 12000, "Sold out"));
+    List<Tour> items = new ArrayList<>();
+    items.add(new Tour("Abc", "Khu A", "2024/12/4", 12000, "Available"));
 
-    request.setAttribute("tourList", tourList);
+    request.setAttribute("items", items);
 %>
-<c:forEach var="tour" items="${tourList}">
-    <p>tour name: ${tour.name}</p>
-    <p>location: ${tour.location}</p>
-    <p>departure date,: ${tour.departureDate}</p>
-    <p>price : ${tour.price}</p>
-    <p>status  : ${tour.status}</p>
+<c:forEach var="item" items="${items}">
+    <p>${item.name}</p>
+    <p>${item.location}</p>
+    <p>${item.departureDate}</p>
+    <p>${item.price}</p>
+    <p>${item.status}</p>
     <br>
 </c:forEach>
 </body>
