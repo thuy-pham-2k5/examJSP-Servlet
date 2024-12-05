@@ -26,7 +26,7 @@
 <c:forEach var="tour" items="${tourList}">
     <p>tour name: ${tour.name}</p>
     <p>location: ${tour.location}</p>
-    <p>departure date,: ${tour.departureDate}</p>
+    <p>departure date: ${tour.departureDate}</p>
     <p>price : ${tour.price}</p>
     <p>status  : ${tour.status}</p>
     <br>
